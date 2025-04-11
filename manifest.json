@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "My Vocabulary Collector",
+    "version": "1.0",
+    "description": "Save new words to your personal dictionary.",
+    "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
